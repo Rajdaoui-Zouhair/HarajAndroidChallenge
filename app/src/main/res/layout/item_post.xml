@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:padding="10dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:background="@drawable/bg_item_post"
+    android:layout_height="130dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="18sp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_comment_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_comment_count_icon"
+        app:layout_constraintEnd_toStartOf="@id/iv_comment_count_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_comment_count_icon"
+        tools:text="(45)" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_comment_count_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_date"
+        app:srcCompat="@drawable/ic_comment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_location_icon"
+        app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toTopOf="@+id/iv_location_icon"
+        tools:text="Riyadh" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_location_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_location"
+        app:srcCompat="@drawable/ic_location" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_user_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_icon"
+        tools:text="Abdul Rehman" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_user_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
